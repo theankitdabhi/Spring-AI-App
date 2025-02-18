@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Spring-AI-App
+  ai:
+    openai:
+      api-key: your-openai-api-key
+      chat:
+        options:
+          model: gpt-4o-mini
+      audio:
+        transcription:
+          options:
+            model: whisper-1
+            response-format: json  # Options: json, text, srt, verbose_json, or vtt
+            temperature: 0  # Sampling temperature (0 to 1)
+            timestamp-granularities: segment  # Options: segment, word (either or both)
+            prompt: "{prompt}"  # Optional text to guide the model’s style or continue a previous audio segment.
+            language: "{language}"  # Input audio language in ISO-639-1 format.
